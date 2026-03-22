@@ -1,0 +1,39 @@
+# Composer
+/vendor
+composer.lock
+
+# Local environment (never commit secrets)
+.env
+.env.local
+.env.*.local
+
+# Build & reports
+/build
+coverage.xml
+coverage.clover
+.phpunit.cache
+.phpunit.result.cache
+.php-cs-fixer.cache
+phpstan-baseline.neon
+
+# Caches & logs
+*.cache
+*.log
+*.tmp
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Optional front-end tooling if added later
+node_modules/
+npm-debug.log
+yarn-error.log
