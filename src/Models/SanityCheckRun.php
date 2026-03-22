@@ -62,16 +62,16 @@ class SanityCheckRun extends Model
         'meta',
     ];
 
-    protected function casts(): array
-    {
-        return [
-            'started_at' => 'datetime',
-            'finished_at' => 'datetime',
-            'success_rate' => 'float',
-            'config_snapshot' => 'array',
-            'meta' => 'array',
-        ];
-    }
+    /**
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'started_at' => 'datetime',
+        'finished_at' => 'datetime',
+        'success_rate' => 'float',
+        'config_snapshot' => 'array',
+        'meta' => 'array',
+    ];
 
     protected static function booted(): void
     {

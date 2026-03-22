@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - GitHub community templates (bug report, feature request, pull request), Dependabot for Actions, maintainer release checklist in `docs/releasing.md`, README badge placeholders, and `.editorconfig` for consistent formatting.
 
+### Fixed
+
+- **Laravel 10:** `SanityCheckRun` and `SanityCheckItem` use the `$casts` property instead of the `casts()` method (Laravel 11+ only), so `meta`, `config_snapshot`, and `parameters` are JSON-encoded on save. Resolves SQLite “Array to string conversion” and failing persistence-related tests under `orchestra/testbench` 8.x.
+
 ## [1.0.0] - 2026-03-22
 
 ### Added

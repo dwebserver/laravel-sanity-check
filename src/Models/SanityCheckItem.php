@@ -46,14 +46,14 @@ class SanityCheckItem extends Model
         'meta',
     ];
 
-    protected function casts(): array
-    {
-        return [
-            'is_ignored' => 'boolean',
-            'parameters' => 'array',
-            'meta' => 'array',
-        ];
-    }
+    /**
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'is_ignored' => 'boolean',
+        'parameters' => 'array',
+        'meta' => 'array',
+    ];
 
     /**
      * @return BelongsTo<SanityCheckRun, $this>
